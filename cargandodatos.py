@@ -71,7 +71,8 @@ caracteristicas = [
 ]
 
 # Mostrar el resultado de la predicción (en este caso IMC)
-caracteristicas = [caracteristicas]  # Asegurando que es una lista de listas
+import numpy as np
+caracteristicas = np.array([caracteristicas])
 prediccion_imc = modelo_entrenado.predict(caracteristicas)[0]
 
 # Mostrar el valor del IMC
