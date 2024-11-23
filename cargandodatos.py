@@ -71,7 +71,8 @@ caracteristicas = [
 ]
 
 # Mostrar el resultado de la predicción (en este caso IMC)
-prediccion_imc = modelo_entrenado.predict([caracteristicas])[0]  # Asumiendo que el modelo predice el IMC
+caracteristicas = [caracteristicas]  # Asegurando que es una lista de listas
+prediccion_imc = modelo_entrenado.predict(caracteristicas)[0]
 
 # Mostrar el valor del IMC
 st.write(f"El IMC predicho es: {prediccion_imc:.2f}")
